@@ -121,3 +121,34 @@ main{
     position: relative; /*estaba en absolute*/
     width: 10.5rem; /* 336px*/
 }
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .header {
+      padding: 2% 0% 0% 15%;
+    }
+  
+    /* Ajusta el contenedor principal para flexbox */
+    main {
+      display: flex;
+      flex-direction: column; 
+      align-items: center; /* Centra los elementos horizontalmente */
+    }
+  
+    /* Ordena los elementos dentro del contenedor */
+    .mensaje {
+      order: 2; 
+    }
+  
+    footer {
+      order: 1; 
+      margin-top: auto; /* Expande el footer hacia abajo */
+    }
+  
+    /* Ajusta la sección .mensaje */
+    .mensaje {
+      width: auto;
+      height: auto;
+      margin: auto; /* Centra la sección verticalmente */
+    }
+  }
