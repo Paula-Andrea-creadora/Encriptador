@@ -1,0 +1,123 @@
+*{
+    background: #f3f5fc;
+    font-family: 'Inter' ;
+    font-weight: 50rem;
+    font-size: 1rem;
+    line-height: 150%;
+}
+
+.logo{ /* Esto es el logo*/
+    padding-top: 20px;
+    margin-left: .625rem;
+    width: 5%;
+}
+
+/* Basamento */
+
+.footer {
+    color: #0A3871;
+    background-color: #ffffff;
+    padding: 3rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400; /* Estilos para centrar el pie de página */
+    margin-top: auto; /* Empuja el pie de página hacia abajo */
+    width: 100%; /* Ancho completo */
+  }
+
+main{
+    display: flex; 
+    margin-bottom: .625rem;
+    margin-left: 11.25rem;
+}
+
+/* Esto la caja de el encriptador */
+
+.text-area{
+    height: 400px;
+    border: none;
+    color: #0A3871;
+    margin-top: 1.25rem;
+    padding: 0.125rem;
+    text-transform: lowercase; /* Transformar el texto a minuscula */
+}
+
+/*Cuando lo toca */
+::placeholder{
+    color: #0A3871;}
+    .text-area:focus{ 
+    outline: none;
+}
+
+/* Esto la caja de el desencriptador */
+/* mejorar la posicion de la imagen */
+.mensaje{
+    background: #ffffff;
+    background-image: url("/imagenes/perrito_buscador.png");
+    background-repeat: no-repeat;
+    background-position: center; /* Centra la imagen de fondo */
+    border: none;
+    border-radius: 0.5rem;
+    color:#0A3871;
+    margin-left: 6.12rem;
+    margin-top: 0.25rem;
+    padding-left: 2.25rem;
+    height: 35rem;/* */
+    position: fixed;
+    width: 15rem;
+    
+}
+.mensaje:focus{
+    outline: none;
+}
+
+/* Texto de informacion */
+/* agregar icono de informacion*/
+.informacion{
+    color: #495057;
+    font-size: 0.8rem;
+}
+
+/* Botones */
+.botones{
+    display: flex;
+    margin-top: 1rem;
+    align-items: flex-start; /* Alinea los elementos al centro del contenedor */
+}
+
+.btn-encriptar{
+    background-color: #0A3871;
+    border:1px solid #0A3871;
+    border-radius: 24px;
+    color:#ffffff;
+    cursor: pointer;
+    height: 2.20rem;
+    width: 10.5rem; /* 328px*/
+    margin-bottom: 1.25rem; /* Agrega un margen inferior al botón */
+}
+
+.btn-desencriptar{
+    background-color: #D8DFE8;
+    border:1px solid #0A3871;
+    border-radius: 24px;
+    color:#0A3871;
+    cursor: pointer;
+    height: 2.20rem;
+    margin-left: 1.9rem;
+    width: 10.5rem;/* 328px*/
+    margin-bottom: 20px; /* Agrega un margen inferior al botón */
+}
+
+/* Boton de copiar*/
+/* mejorar la posiscion*/
+.copiar{
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color:#0A3871;
+    cursor: pointer;
+    height: 2.20rem;
+    margin-left: 6.75rem;
+    margin-top: 31.5rem;/*estaba en 418 y lo baje para que se alinee con los otros botones*/
+    position: relative; /*estaba en absolute*/
+    width: 10.5rem; /* 336px*/
+}
