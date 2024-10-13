@@ -1,84 +1,74 @@
-//dom captura la informacion del text area
-//campos en los que trabajamos
-const textArea = document.querySelector(".text-area");
-const mensaje = document.querySelector(".mensaje");
+//variables
 
-//2 - function del boton que recibe la funcion encriptar
+const textArea=document.querySelector(".palabras-a-codificar");
+
+const mensaje=document.querySelector(".palabras-codificadas");
+
+//4to funcion del boton
 function btnEncriptar() {
-  const textoEncriptado = encriptar(textArea.value);
-  console.log("Texto original:", textArea.value); // IVerificacion
-  console.log("Texto encriptado:", textoEncriptado);
-
-  //mostrarlo en el campo de mensaje
-  mensaje.value = textoEncriptado;
-  //limpiar el campo despues de usarlo
-  textArea.value = "";
-  //para quitar la imagen
-  mensaje.style.backgroundImage = "none";
+    const textoEncriptado = encriptar(textArea.value);
+    mensaje.value = textoEncriptado;
+    //para que desaparezca la imagen
+    textArea.value = "";
+    mensaje.style.backgroundImage = "none";
 }
 
-//1 - se almacena en la matriz (conjunto de arreglos)
+//2do funciones encriptar
+function encriptar(stringEncriptado){
 
-//variable dentro de la funcion 
-function encriptar(stringEncriptado) {
-  let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ia"], ["o", "ober"], ["u", "ufat"]];
+    //1ro Arreglos multidimensionales o arreglos de arregloa
 
-  //console.table(matrizCodigo);
-  stringEncriptado = stringEncriptado.toLowerCase(); //Combierte todo a minuscula
+    let matrizCodigo=[["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
+    //console.table(matrizCodigo);
 
-  //recorrido bucle for
-  for (let i = 0; i < matrizCodigo.length; i++) {
-    //condicion 
-    if (stringEncriptado.includes(matrizCodigo[i][0])) {
-      //verificamos la sustitucion de TODO
-      stringEncriptado = stringEncriptado.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+    stringEncriptado = stringEncriptado.toLowerCase();
+
+    //3ro bucle for
+
+    for(let i=0 ; i<matrizCodigo.length; i++ ){
+        if(stringEncriptado.includes(matrizCodigo[i][0])){
+            stringEncriptado = stringEncriptado.replaceAll(matrizCodigo [i][0],matrizCodigo [i][1])
+        }
+
     }
-  }
-  return stringEncriptado;
+    return stringEncriptado;
+
 }
 
-//desencriptado   btnDesencriptar
+//Funcion desencriptar
 
-//2 - function del boton que recibe la funcion desencriptar
-function btnDesencriptar() { // Define la función btnDesencriptar
-  const textoDesencriptado = desencriptar(mensaje.value);
-  //console.log("Texto original:", textArea.value); // IVerificacion
-  //console.log("Texto encriptado:", textoDesencriptado);
+//4to paso
 
-  //mostrarlo en el campo de mensaje
-  mensaje.value = textoDesencriptado;
-  //limpiar el campo despues de usarlo
-  textArea.value = "";
+function btnDesencriptar(){
+    const textoDesencriptado = desencriptar(mensaje.value); // Cambia textArea.value por mensaje.value
+    mensaje.value = textoDesencriptado;
 }
 
-//1 - se almacena en la matriz (conjunto de arreglos)
+//2do paso
 
-//variable dentro de la funcion 
-function desencriptar(stringDesencriptada) {
-  let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ia"], ["o", "ober"], ["u", "ufat"]];
+function desencriptar(stringDesencriptado){
 
-  //console.table(matrizCodigo);
-  stringDesencriptada = stringDesencriptada.toLowerCase(); //Combierte todo a minuscula
+    //1ro Arreglo
+    let matrizCodigo = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
 
-  //recorrido bucle for
-  for (let i = 0; i < matrizCodigo.length; i++) {
-    //condicion 
-    if (stringDesencriptada.includes(matrizCodigo[i][1])) {
-      //verificamos la sustitucion de TODO
-      stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
+    stringDesencriptado = stringDesencriptado.toLowerCase();
+
+    //3ro bucle for
+    for(let i=0 ; i<matrizCodigo.length; i++){
+        stringDesencriptado = stringDesencriptado.replaceAll(matrizCodigo[i][1],matrizCodigo [i][0])
     }
-  }
-  return stringDesencriptada;
+
+    return stringDesencriptado;
+
 }
+  
 
 //Copiar
 
 //1ro Definir la funcion
 
-function copiar() {
+function btnCopiar() {
     const mensajeDesencriptado = mensaje.value; // Obtiene el mensaje desencriptado del campo de texto
-    navigator.clipboard.writeText(mensajeDesencriptado)
+    navigator.clipboard.writeText(mensajeDesencriptado);
 }
-
-
 
