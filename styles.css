@@ -67,7 +67,7 @@
     outline: none; /* sin linea de borde*/
     border: none; /* sin linea de borde*/
     background-color: var(--color-secundario); /*color de fondo*/
-    background-image: url("/imagenes/perrito_buscador.png"); /*perrito de fondo*/
+    background-image: url("./imagenes/perrito_buscador.png"); /*perrito de fondo*/
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
     color:var(--color-letras) ;  /*es el color de texto*/
