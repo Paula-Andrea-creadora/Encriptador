@@ -9,11 +9,11 @@
 }
 
 :root{ /* variables*/
-    --color-primario:#b0dbf3; 
-    --color-secundario:#e3f8fe; 
+    --color-primario: #b0dbf3; 
+    --color-secundario: #e3f8fe; 
     --color-terciario: #3e2686; 
-    --color-letras:#000000; 
-    --color-hover:#110046;
+    --color-letras: #000000; 
+    --color-hover: #110046;
     
     --fuente-reboto: "Roboto", sans-serif;
 }
