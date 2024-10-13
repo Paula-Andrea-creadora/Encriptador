@@ -1,154 +1,131 @@
-*{
-    background: #f3f5fc;
-    font-family: 'Inter' ;
-    font-weight: 50rem;
-    font-size: 1rem;
-    line-height: 150%;
+/* Letras*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{  /* cambio universal*/
+    padding: 0;
+    margin:0;
+
 }
 
-.logo{ /* Esto es el logo*/
-    padding-top: 20px;
-    margin-left: .625rem;
-    width: 5%;
+:root{ /* variables*/
+    --color-primario:#b0dbf3; 
+    --color-secundario:#e3f8fe; 
+    --color-terciario: #3e2686; 
+    --color-letras:#000000; 
+    --color-hover:#110046;
+    
+    --fuente-reboto: "Roboto", sans-serif;
 }
 
-/* Basamento */
-
-.footer {
-    color: #0A3871;
-    background-color: #ffffff;
-    padding: 3rem;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 400; /* Estilos para centrar el pie de página */
-    margin-top: auto; /* Empuja el pie de página hacia abajo */
-    width: 100%; /* Ancho completo */
-  }
-
-main{
-    display: flex; 
-    margin-bottom: .625rem;
-    margin-left: 11.25rem;
+.body{
+    background-color: var(--color-primario); /* fondo*/
+    color: var(--color-terciario);/* letras*/ 
 }
 
-/* Esto la caja de el encriptador */
-
-.text-area{
-    height: 400px;
-    border: none;
-    color: #0A3871;
-    margin-top: 1.25rem;
-    padding: 0.125rem;
-    text-transform: lowercase; /* Transformar el texto a minuscula */
+.logo img{ /* como es una imagen*/
+    padding-top: 3%; /* margen superior*/
+    margin-left: 1%; /* margen izquierdo*/
+    width: 4%; /* reduce el ancho de la imagen*/
+    height: auto; /* ajusta la altura de la imagen de forma automatica*/
 }
 
-/*Cuando lo toca */
-::placeholder{
-    color: #0A3871;}
-    .text-area:focus{ 
-    outline: none;
+.presentacion{ /* es de la clase main*/
+   display: flex;
+   align-items: center ;
+   padding:2% 5% ;
+   justify-content: space-between;
+   gap:25%;
+   margin-bottom: 50px;
 }
 
-/* Esto la caja de el desencriptador */
-/* mejorar la posicion de la imagen */
-.mensaje{
-    background: #ffffff;
-    background-image: url("/imagenes/perrito_buscador.png");
-    background-repeat: no-repeat;
-    background-position: center; /* Centra la imagen de fondo */
-    border: none;
-    border-radius: 0.5rem;
-    color:#0A3871;
-    margin-left: 6.12rem;
-    margin-top: 0.25rem;
-    padding-left: 2.25rem;
-    height: 35rem;/* */
-    position: fixed;
-    width: 15rem;
+.presentacion-contenido{
+    width: 50%;
+    display: flex;
+    flex-direction:column;
+    gap:10%;
+}
+ 
+
+
+.palabras-a-codificar{ /* es de donde se escribe */
+    outline: none; /* sin linea de borde*/
+    border: none; /* sin linea de borde*/
+    background-color: var(--color-primario); /*color de fondo*/
+    color:var(--color-letras) ;  /*es el color de texto*/
+    font-family: var(--fuente-reboto);
+    font-size: 20px;
+    width: 150%;
+    height: 450px;
+    text-transform:lowercase;
     
 }
-.mensaje:focus{
-    outline: none;
+
+
+
+.palabras-codificadas{
+    outline: none; /* sin linea de borde*/
+    border: none; /* sin linea de borde*/
+    background-color: var(--color-secundario); /*color de fondo*/
+    background-image: url("/imagenes/perrito_buscador.png"); /*perrito de fondo*/
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    color:var(--color-letras) ;  /*es el color de texto*/
+    font-family: var(--fuente-reboto);
+    text-align: center;
+    font-size: 20px;
+    width: 75%; /* ancho*/
+    height: 450px;
+    text-transform:lowercase; /*es minuscula SIEMPRE*/
+    border-radius: 5px; /*es el redondeo del cuadro*/
 }
 
-/* Texto de informacion */
-/* agregar icono de informacion*/
-.informacion{
-    color: #495057;
-    font-size: 0.8rem;
+.Informacion img{
+    margin-left: 1.5%;
+    width: 2%;
+    height: auto;
 }
 
-/* Botones */
 .botones{
-    display: flex;
-    margin-top: 1rem;
-    align-items: flex-start; /* Alinea los elementos al centro del contenedor */
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.btn-encriptar{
-    background-color: #0A3871;
-    border:1px solid #0A3871;
-    border-radius: 24px;
-    color:#ffffff;
-    cursor: pointer;
-    height: 2.20rem;
-    width: 10.5rem; /* 328px*/
-    margin-bottom: 1.25rem; /* Agrega un margen inferior al botón */
+.botones-estilo{
+    background-color: var(--color-terciario);
+    border: none;
+    color: #f6f6f6;;
+    padding: 15px 32px; /* Espacio interno */
+    text-align: center; /* Alineación del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 4px 2px; /* Margen */
+    border-radius: 8px;
 }
 
-.btn-desencriptar{
-    background-color: #D8DFE8;
-    border:1px solid #0A3871;
-    border-radius: 24px;
-    color:#0A3871;
-    cursor: pointer;
-    height: 2.20rem;
-    margin-left: 1.9rem;
-    width: 10.5rem;/* 328px*/
-    margin-bottom: 20px; /* Agrega un margen inferior al botón */
+.botones-estilo:hover {  /*alteración del aspecto de un componente de la 
+interfaz gráfica una vez
+que se posa el ratón sobre él,
+aunque no haya sido seleccionado*/
+background-color: var(--color-hover);
 }
 
-/* Boton de copiar*/
-/* mejorar la posiscion*/
-.copiar{
-    border: 1px solid #0A3871;
-    border-radius: 24px;
-    color:#0A3871;
-    cursor: pointer;
-    height: 2.20rem;
-    margin-left: 6.75rem;
-    margin-top: 31.5rem;/*estaba en 418 y lo baje para que se alinee con los otros botones*/
-    position: relative; /*estaba en absolute*/
-    width: 10.5rem; /* 336px*/
+.footer{ /* eztilo del hoover */
+    background-color: var(--color-terciario); /*color de fondo*/
+    color:var(--color-secundario) ;  /*es el color de texto*/
+    font-family: var(--fuente-reboto);
+    font-size: 20px;
+    margin: 2px 2px; /* Margen */
+    padding: 20px;
+    text-align: center;
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-    .header {
-      padding: 2% 0% 0% 15%;
+@media (max-width:500px) {
+    
+    .body{
+        width: auto;
     }
-  
-    /* Ajusta el contenedor principal para flexbox */
-    main {
-      display: flex;
-      flex-direction: column; 
-      align-items: center; /* Centra los elementos horizontalmente */
+    
+    .presentacion{
+        flex-direction: column;
     }
-  
-    /* Ordena los elementos dentro del contenedor */
-    .mensaje {
-      order: 2; 
-    }
-  
-    footer {
-      order: 1; 
-      margin-top: auto; /* Expande el footer hacia abajo */
-    }
-  
-    /* Ajusta la sección .mensaje */
-    .mensaje {
-      width: auto;
-      height: auto;
-      margin: auto; /* Centra la sección verticalmente */
-    }
-  }
+}
