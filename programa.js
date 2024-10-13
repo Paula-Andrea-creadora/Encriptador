@@ -71,4 +71,3 @@ function btnCopiar() {
     const mensajeDesencriptado = mensaje.value; // Obtiene el mensaje desencriptado del campo de texto
     navigator.clipboard.writeText(mensajeDesencriptado);
 }
-
