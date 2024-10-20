@@ -130,4 +130,7 @@ background-color: var(--color-hover);
     .presentacion{
         flex-direction: column;
     }
+    .palabras-codificadas{
+        width: 150%;
+    }
 }
